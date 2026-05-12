@@ -1,1 +1,9 @@
-<p>type-detail works!</p>
+@if (pokemon) {
+  <h2>{{ pokemon.name }}</h2>
+  <p>ID: {{ pokemon.id }}</p>
+  <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+  <p>Altezza: {{ pokemon.height }}</p>
+  <p>Peso: {{ pokemon.weight }}</p>
+}
+<br>
+<a [routerLink]="['/type', typeName]">← Torna alla lista</a>
