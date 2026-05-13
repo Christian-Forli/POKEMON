@@ -1,9 +1,17 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-category-list',
-  imports: [],
-  templateUrl: './category-list.html',
-  styleUrl: './category-list.css',
+  standalone: true,
+  imports: [CommonModule, RouterLink],
+  templateUrl: './category-list.html'
 })
-export class CategoryList {}
+export class CategoryList {
+  categories = [
+    { name: 'fire' },
+    { name: 'water' },
+    { name: 'grass' }
+  ];
+}

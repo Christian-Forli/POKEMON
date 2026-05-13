@@ -1,7 +1,9 @@
 <h2>Tipo: {{ typeName }}</h2>
 <ul>
   @for (p of pokemons; track p.name) {
-    <li><a [routerLink]="['/type', typeName, 'detail']" [queryParams]="{ url: p.url }">{{ p.name }}</a></li>
+    <li>
+      <a [routerLink]="['/type', typeName, 'detail']" [queryParams]="{ url: p.url }">{{ p.name }}</a>
+    </li>
   }
 </ul>
 <a routerLink="/">← Torna alle categorie</a>
